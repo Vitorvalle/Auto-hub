@@ -53,7 +53,6 @@ body {
 /*Welcome card CSS*/
 
 .WelcomeImage{
-  position: absolute;
   top: 20px;
   bottom: 0px;
   filter: brightness(50%);
@@ -61,29 +60,29 @@ body {
 }
 
 .WelcomeCard {
-  position: relative;
-  padding: 80px 0px;
+  display: flex;
+  object-fit:contain;
+  padding: 80px 0px 0px 0px;
   overflow: hidden;
   height: 400px;
   width: 100%;
   text-align: center;
-}
+}    /* position: relative; */
+
 .ImportantText {
   position: absolute;
-  margin: auto;
-  left: 50%;
+  align-self: center;
   top: 40%;
   font-size:x-large;
   font-style: normal;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
-  text-align: center;
   letter-spacing: 1px}
 
 /*Categories CSS*/
 
 .Categories {
-  padding: 10% 0px 300px 15%;
+  padding: 10% 0px 100px 15%;
   font-size: large;
   font: bold;
 }

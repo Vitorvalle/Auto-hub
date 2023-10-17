@@ -1,0 +1,22 @@
+.footer {
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #3f3f3f;
+    padding: 15px 0px;
+    text-align: center;
+}
+.footer2 {
+   bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #363636;
+    padding: 15px 10px;
+    text-align: center;    
+}
+
+.disclaimer {
+    color: white;
+}
