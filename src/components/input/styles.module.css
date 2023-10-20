@@ -1,0 +1,12 @@
+.input {
+    width: 50%;
+}
+
+.InputBox {
+    width: 34%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-left: 5px;
+    border-radius: 30px;
+}

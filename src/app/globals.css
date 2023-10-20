@@ -61,13 +61,14 @@ body {
 
 .WelcomeCard {
   display: flex;
-  object-fit:contain;
+  object-fit:scale-down;
   padding: 80px 0px 0px 0px;
   overflow: hidden;
   height: 400px;
   width: 100%;
   text-align: center;
-}    /* position: relative; */
+  justify-content: center;
+}
 
 .ImportantText {
   position: absolute;

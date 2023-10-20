@@ -8,6 +8,7 @@ import SearchBox from '@/components/searchBox/searchBox';
 import EmblaCarousel from '@/containers/categories/categories';
 import { EmblaOptionsType } from 'embla-carousel-react';
 import About from '@/containers/about/about';
+import Search from '@/containers/search/search';
 
 const OPTIONS: EmblaOptionsType = { dragFree: true }
 const SLIDE_COUNT = 5
@@ -37,9 +38,7 @@ export default function Home() {
             Todos os carros, um só lugar
             </text>
         </div>
-        <div>
-          <SearchBox/>
-        </div>
+        <Search/>
         <div className='Categories'>
           <h1> Categorias </h1>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
