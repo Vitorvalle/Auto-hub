@@ -1,4 +1,4 @@
-import InputAdv from '../input/input';
+import { InputAdv1, InputAdv2, InputAdv3 } from '../input/input';
 import styles from './styles.module.css'
 import { Button, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
 
@@ -44,15 +44,33 @@ export default function AdvancedSearch() {
                 </Select>
             </div>
             <div className={styles.Line2}>  
-                <InputAdv/>
-                <InputAdv/>
-                <InputAdv/>
+                <InputAdv1/>
+                <InputAdv2/>
+                <InputAdv3/>
             </div>
             <div className={styles.Line2}>
-                <Tabs className={styles.Tags} size='lg'>
-                    <Tab key={1} className={styles.aaa} title="automatico"/>
-                    <Tab title="manuel"></Tab>
+                <Tabs className={styles.Tags} fullWidth={true}>
+                    <Tab className={styles.aaa} title="automatico"></Tab>
+                    <Tab className={styles.aaa}title="manuel"></Tab>
                 </Tabs>
+                <Tabs className={styles.Tags} fullWidth={true}>
+                    <Tab className={styles.aaa} title="concessionaria"></Tab>
+                    <Tab className={styles.aaa}title="particular"></Tab>
+                </Tabs>
+                <Select
+                className={styles.input}
+                label='Cor'
+                placeholder="Qualquer cor">
+                </Select>
+            </div>
+
+            <div className={styles.Buttons}>
+                <Button className={styles.SearchButton}>
+                Buscar
+                </Button>
+                <Button className={styles.ClearButton}>
+                Limpar
+                </Button>
             </div>
         </div>
     )
