@@ -33,9 +33,7 @@ export default function SearchBox() {
                 Buscar
                 </Button>
             </div>
-            <div className="accordion">
-                <Button className={styles.AdvancedButton}> Pesquisa Avançada</Button>
-            </div>
+
         </div>
     )
 }

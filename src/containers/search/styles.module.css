@@ -1,0 +1,16 @@
+.AdvancedButton {
+    background-color: rgb(141, 186, 228);
+    width: 70%;
+    height: 40px;
+    bottom: 0px;
+    border-radius: 0px 0px 30px 30px;
+    left: 15%;
+  }
+  .Change {
+    padding-bottom: 200px;
+  }
+
+  .SearchContainer {
+    margin-top: -80px;
+    justify-content: center;
+  }
