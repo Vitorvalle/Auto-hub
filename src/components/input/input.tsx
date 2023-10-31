@@ -1,9 +1,9 @@
 import {Input} from "@nextui-org/react"
 import styles from "./styles.module.css"
 
-export function InputAdv1() {
+export function InputAdv1(props: {sidebar: boolean}) {
     return(
-        <div className={styles.InputBox}>
+        <div className={props.sidebar ? styles.InputSideBar : styles.InputBox}>
             <Input
                 className={styles.input}
                 type="Ano"
@@ -20,9 +20,9 @@ export function InputAdv1() {
     )
 } 
 
-export function InputAdv2() {
+export function InputAdv2(props: {sidebar: boolean}) {
     return(
-        <div className={styles.InputBox}>
+        <div className={props.sidebar ? styles.InputSideBar : styles.InputBox}>
             <Input
                 className={styles.input}
                 type="Estado"
@@ -39,9 +39,9 @@ export function InputAdv2() {
     )
 } 
 
-export function InputAdv3() {
+export function InputAdv3(props: {sidebar: boolean}) {
     return(
-        <div className={styles.InputBox}>
+        <div className={props.sidebar ? styles.InputSideBar : styles.InputBox}>
             <Input
                 className={styles.input}
                 type="Estado"

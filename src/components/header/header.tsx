@@ -5,10 +5,10 @@ export default function Header(props: any) {
     return (
       <div>
         <div className={styles.header}>
-          <a href="#default" className={styles.logo}>CompanyLogo</a>
-          <div className='header-right'>
-            <a className={styles.active} href="./login">Home</a>
-            <a href="#contact">Contact</a>
+          <a href="/" className={styles.logo}>CompanyLogo</a>
+          <div className={styles.headerright}>
+            <a className={styles.active} href="/">Home</a>
+            <a href="/result">Contact</a>
             <a href="/login">Login</a>
           </div>
         </div>

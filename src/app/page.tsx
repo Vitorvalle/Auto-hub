@@ -4,7 +4,6 @@ import * as React from 'react';
 import Image from 'next/image';
 import welcome from '../images/tipos-de-carros-capa.png';
 import Header from '../components/header/header';
-import SearchBox from '@/components/searchBox/searchBox';
 import EmblaCarousel from '@/containers/categories/categories';
 import { EmblaOptionsType } from 'embla-carousel-react';
 import About from '@/containers/about/about';
@@ -22,7 +21,6 @@ export default function Home() {
       <meta charSet='utf-8' />
       <title>Pagina Inicial</title>
     </head>
-    <Header/>
     <body> 
       <main>
         <div className='WelcomeCard'>

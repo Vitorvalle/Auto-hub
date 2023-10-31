@@ -1,13 +1,14 @@
 
   
   .header {
-    position: fixed;
+    position:fixed;
     top: 0;
     height: 80px;
     width: 100%;
     overflow: hidden;
     background-color: #007BD3;
     padding: 15px 10px;
+    z-index: 500;
   }
   
   .header a {
@@ -36,7 +37,7 @@
     color: white;
   }
   
-  .header-right {
+  .headerright {
     float: right;
   }
   

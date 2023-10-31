@@ -29,7 +29,8 @@ export default function SearchBox() {
                 label='Estado'
                 placeholder="País inteiro">
                 </Input>
-                <Button className={styles.SearchButton}>
+                <Button className={styles.SearchButton}
+                href="./result">
                 Buscar
                 </Button>
             </div>
