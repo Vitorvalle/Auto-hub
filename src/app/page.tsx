@@ -1,13 +1,11 @@
 'use client'
 
 import * as React from 'react';
-import Image from 'next/image';
-import welcome from '../images/tipos-de-carros-capa.png';
-import Header from '../components/header/header';
 import EmblaCarousel from '@/containers/categories/categories';
 import { EmblaOptionsType } from 'embla-carousel-react';
 import About from '@/containers/about/about';
 import Search from '@/containers/search/search';
+import WelcomeImage from '@/components/welcomeImage/welcomeImage';
 
 const OPTIONS: EmblaOptionsType = { dragFree: true }
 const SLIDE_COUNT = 5
@@ -24,14 +22,7 @@ export default function Home() {
     <body> 
       <main>
         <div className='WelcomeCard'>
-          <Image
-          className='WelcomeImage'
-          src={welcome}
-          alt='Cartão de visita'
-          width={2000}
-          height={20}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          fill={false}/>
+          <WelcomeImage/>
           <text className='ImportantText'>
             Todos os carros, um só lugar
             </text>

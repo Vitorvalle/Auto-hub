@@ -6,6 +6,7 @@ import styles from "./styles.module.css"
 export default function Filter() {
     return(
         <div className={styles.Filters}>
+            <h2 className={styles.head}>Filtros de pesquisa</h2>
                 <Select
                 className={styles.input}
                 label="Marca"

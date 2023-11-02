@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/79174e198176f8e04958195dcee95e84?family=Orion+Esperanto+Dika);
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -56,17 +57,9 @@ body {
 
 /*Welcome card CSS*/
 
-.WelcomeImage{
-  top: 20px;
-  bottom: 0px;
-  filter: brightness(50%);
-  width: 100%;
-}
-
 .WelcomeCard {
   display: flex;
   object-fit:scale-down;
-  padding: 80px 0px 0px 0px;
   overflow: hidden;
   height: 400px;
   width: 100%;

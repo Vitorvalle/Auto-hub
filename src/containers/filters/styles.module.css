@@ -14,6 +14,11 @@
     border-color: black;
   }
 
+  .head {
+    font-weight: bold;
+    align-self: center;
+  }
+
 .Tags{
     width:100%;
     border-radius: 50px;
