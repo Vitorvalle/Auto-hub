@@ -1,22 +1,24 @@
 
   
   .header {
-    position: fixed;
+    position:fixed;
     top: 0;
     height: 80px;
     width: 100%;
     overflow: hidden;
     background-color: #007BD3;
     padding: 15px 10px;
+    z-index: 500;
   }
   
   .header a {
+    display: flex;
     float: left;
-    color: black;
+    color: white;
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px; 
+    font-size: 22px; 
     line-height: 25px;
     border-radius: 4px;
   }
@@ -27,16 +29,10 @@
   }
   
   .header a:hover {
-    background-color: #ddd;
-    color: black;
+    text-decoration:underline;
   }
+
   
-  .header a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  .header-right {
+  .headerright {
     float: right;
   }
-  

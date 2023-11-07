@@ -1,11 +1,12 @@
-import { InputAdv1, InputAdv2, InputAdv3 } from '../input/input';
-import styles from './styles.module.css'
-import { Button, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
+import { InputAdv1, InputAdv2, InputAdv3 } from "@/components/input/input";
+import { Button, Select, Tab, Tabs } from "@nextui-org/react";
+import styles from "./styles.module.css"
 
-export default function AdvancedSearch() {
-    return (
-        <div className={styles.SearchBox}>
-            <div className={styles.Line}>
+
+export default function Filter() {
+    return(
+        <div className={styles.Filters}>
+            <h2 className={styles.head}>Filtros de pesquisa</h2>
                 <Select
                 className={styles.input}
                 label="Marca"
@@ -22,9 +23,8 @@ export default function AdvancedSearch() {
                 className={styles.input}
                 label='Estado'
                 placeholder="País inteiro">
-                </Select>
-            </div>            
-            <div className={styles.Line2}>
+                </Select>          
+
                 <Select
                 className={styles.input}
                 label="Versao"
@@ -42,13 +42,11 @@ export default function AdvancedSearch() {
                 label='Combustivel'
                 placeholder="Qualquer">
                 </Select>
-            </div>
-            <div className={styles.Line2}>  
-                <InputAdv1 sidebar={false}/>
-                <InputAdv2 sidebar={false}/>
-                <InputAdv3 sidebar={false}/>
-            </div>
-            <div className={styles.Line2}>
+
+                <InputAdv1 sidebar={true}/>
+                <InputAdv2 sidebar={true}/>
+                <InputAdv3 sidebar={true}/>
+
                 <Tabs className={styles.Tags} fullWidth={true}>
                     <Tab className={styles.aaa} title="automatico"></Tab>
                     <Tab className={styles.aaa}title="manuel"></Tab>
@@ -62,16 +60,13 @@ export default function AdvancedSearch() {
                 label='Cor'
                 placeholder="Qualquer cor">
                 </Select>
-            </div>
 
-            <div className={styles.Buttons}>
-                <Button className={styles.SearchButton}>
-                Buscar
-                </Button>
                 <Button className={styles.ClearButton}>
                 Limpar
                 </Button>
-            </div>
+                <Button className={styles.SearchButton}>
+                Buscar
+                </Button>
         </div>
     )
 }

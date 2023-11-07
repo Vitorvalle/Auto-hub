@@ -1,0 +1,61 @@
+@tailwind components;
+
+.Filters {
+    left: 0%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color : lightgray;
+    width: 30%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 1% 0px 1%;
+    border-width: 1px;
+    border-color: black;
+  }
+
+  .head {
+    font-weight: bold;
+    align-self: center;
+  }
+
+.Tags{
+    width:100%;
+    border-radius: 50px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+
+.SearchButton {
+    background-color: gold;
+    font:bold;
+    width: 100% ;
+    height: 55px;
+    border-bottom: 5px;
+}
+
+
+  
+.ClearButton {
+    background-color: rgb(132, 217, 250);
+    font:bold;
+    width: 100% ;
+    height: 55px;
+    margin-bottom: 5px;
+}
+  
+.select {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.aaa {
+    width: 100%;
+    height: 50px;
+    padding-bottom: 5px;
+}
+  
+.input {
+    width: 100%;
+    padding-bottom: 5px;
+}

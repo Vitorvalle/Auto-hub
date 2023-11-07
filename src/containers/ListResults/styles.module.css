@@ -1,0 +1,26 @@
+@import url(https://db.onlinewebfonts.com/c/79174e198176f8e04958195dcee95e84?family=Orion+Esperanto+Dika);
+.List {
+    background-color: lightblue;
+    height: auto;
+    width: 90%;
+    border-color: #007BD3;
+    border-width: 2px;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 0px 2px 0px 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Origin {
+    font-size: 35px;
+    color: #007BD3;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.More {
+    font-size: 25px;
+    color: #007BD3;
+    align-self: center;
+}
