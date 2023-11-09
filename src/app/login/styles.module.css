@@ -1,0 +1,74 @@
+.container {
+    height: 844px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-image: url('../../images/fundoLogin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.areaLogin {
+    background-color: rgba(213, 213, 213, 0.9);
+    height: 450px;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.divEsquerda {
+    position: absolute;
+    height: 450px;
+    background-color: rgba(0, 123, 211, 0.7);
+    border-top-left-radius: 20px;
+    border-end-start-radius: 20px;
+    float: left
+}
+
+.escritaLogin{
+    font-size: 24px;
+    margin-left: 50%;
+    margin-top: 55%;
+}
+
+.usuario {
+    margin-left: 50%;
+    margin-top: 10%;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 8px;
+}
+
+.senha {
+    margin-left: 50%;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 8px;
+}
+
+.botao {
+    margin-top: 20px;
+    height: 22px;
+    width: 65px;
+    background-color: #007BD3;
+    border-radius: 10px;
+    display: block;
+    margin-left: 112%;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+}
+
+
+.divDireita{
+    height: 450px;
+    width: 450px;
+    float: right;
+    background-image: url('../../images/usuario.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -12,7 +12,7 @@ export default function Header(props: any) {
           <div className={styles.headerright}>
             <a className={styles.Pesquisa} href="/"> <HiMagnifyingGlass/> Pesquisa</a>
             <a className={styles.Pesquisa} href="/result">Contact</a>
-            <a className={styles.Pesquisa} href="/login"><HiOutlineUser/>Login</a>
+            <a className={styles.Pesquisa} href="../login"><HiOutlineUser/>Login</a>
           </div>
         </div>
       </div>
