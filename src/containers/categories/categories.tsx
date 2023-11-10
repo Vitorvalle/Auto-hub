@@ -4,8 +4,6 @@ import imageByIndex from './imageByIndex'
 import Image from "next/image";
 import styles from './styles.module.css';
 
-const Cat = ["Hatch", "Sedan", "", "", ""]
-const catIndex = (index1:number) => Cat[index1 % Cat.length]
 
 type PropType = {
   slides: number[]
@@ -29,7 +27,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 alt=""
                 placeholder='blur'
               />
-             
             </div>
           ))}
         </div>

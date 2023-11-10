@@ -5,9 +5,8 @@ export default function About() {
         <div className={styles.about}>
             <h1 className={styles.h1}>O que é a AutoHub</h1>
             <h3>O AutoHub agrega em um único lugar os anúncios de veículos das principais
-plataformas de venda de automóveis, novos e seminovos, em todo território brasileiro.
- Facilitando a sua busca pelo seu carro ideal.</h3>
-            <h2>Plataformas que trabalhamos</h2>
+                plataformas de venda de automóveis, novos e seminovos, em todo território brasileiro.
+                Facilitando a sua busca pelo seu carro ideal.</h3>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from "react"
 import styles from "./styles.module.css"
@@ -13,8 +13,7 @@ export default function Result() {
             <Filter/>
             <div className={styles.result}>
                 <h2 className={styles.NumberResults}>Resultados</h2>
-                <ListResult> <ListingCard/><ListingCard/><ListingCard/><ListingCard/></ListResult>
-                <ListResult> <ListingCard/><ListingCard/><ListingCard/><ListingCard/></ListResult>
+                <ListResult origem={"OLX"}/>
             </div>
         </div>
     )

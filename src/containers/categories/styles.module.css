@@ -27,7 +27,7 @@
     height: var(--slide-height);
     width: 250px;
     height: 300px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 15px;
     filter: brightness(80%);
   } 
