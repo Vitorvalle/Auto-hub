@@ -15,19 +15,21 @@ export default function SignIn() {
 
             <div className={styles.container}>
                 <div className={styles.areaLogin}>
-                    <div id="loginContent">
-                        <div className={styles.divEsquerda}>
-                            <h1 className={styles.escritaLogin}>Login</h1>
-                            <input className={styles.usuario} type='username' name='usuario' placeholder='Usuário ou E-mail' />
+                    <div className={styles.divCima}>                        
+                        <div className={styles.cimaEsquerda}>
+                            <input className={styles.usuario} type='username' name='usuario' placeholder='Usuário' />
+                            <input className={styles.email} type='email' name='e-mail' placeholder='E-mail' />
+                            
+                        </div>
+                        <div className={styles.cimaDireita}>
                             <input className={styles.senha} type='password' name='senha' placeholder='Senha' />
-
+                            <input className={styles.senha2} type='password' name='confSenha' placeholder='Confirma Senha' />
                             <a className={styles.botaoEntr} type='submit' href='/' >Entrar</a>
-                            <a className={styles.botaoCads} type='button' href="./cadastro/" >Cadastrar-se</a>
                         </div>
                     </div>
-
-                    <div className={styles.divDireita}></div>
-
+                    <div className={styles.divBaixo}>
+                        <h1></h1>
+                    </div>
 
                 </div>
             </div>

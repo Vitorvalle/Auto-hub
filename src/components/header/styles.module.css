@@ -1,38 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #0285e3;
+  padding: 15px 10px;
+  z-index: 500;
+}
 
-  
-  .header {
-    position:fixed;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    overflow: hidden;
-    background-color: #007BD3;
-    padding: 15px 10px;
-    z-index: 500;
-  }
-  
-  .header a {
-    display: flex;
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 22px; 
-    line-height: 25px;
-    border-radius: 4px;
-  }
-  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .header a:hover {
-    text-decoration:underline;
-  }
+.header a {
+  display: flex;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-  
-  .headerright {
-    float: right;
-  }
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+
+.headerright {
+  float: right;
+}
+
+.logo{
+  background-image: url('../../images/AutoHub.png');
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 150px;
+}
