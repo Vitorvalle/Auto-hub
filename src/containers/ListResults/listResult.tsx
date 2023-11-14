@@ -5,11 +5,13 @@ import Anuncio from "@/interface/interface";
 
 const getAnuncios = async () => {
     try {
-        const res = await fetch ('http://localhost:3000/api/anuncios');
+        const res = await fetch('http://localhost:3000/api/anuncios');
         if(!res.ok){
-            throw new Error("falha em buscar anuncios")
+            throw new Error("falha em buscar anuncios ok")
         }
-        return res.json().then( (aa) => aa).catch( (ee) => {throw new Error("falha em buscar anuncios")})
+        const x = await res.json()
+        console.log({anuncios: x.anuncios})
+        return x
     } catch(error) {
         console.log("erro em carregar", error)
     }
@@ -18,12 +20,14 @@ const getAnuncios = async () => {
 export default async function ListResult(props: {origem: String}) {
 
     const {anuncios} = await getAnuncios();
+    const anunciosR = anuncios.filter((anuncio: Anuncio) => anuncio.origem == "OLX")
+    return anuncios.length > 0 && (
 
-    return(
         <div className={styles.List}>
-            <h2 className={styles.Origin}>Resultados OLX</h2>
-            {anuncios.map((t:Anuncio) => (
-                <ListingCard anuncio={t}/>))}
+            <h2 className={styles.Origin}>Resultados OLX {anunciosR.length}</h2>
+            {anunciosR.map((t:Anuncio, i: number) => (
+                <ListingCard anuncio={t} key={i}/>
+                ))}
             <a className={styles.More}>Mostrar mais</a>
         </div>
     )

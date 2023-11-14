@@ -1,15 +1,16 @@
-
-import Image from 'next/image'
+import React from "react"
+import {Image} from "@nextui-org/react"
 import styles from './styles.module.css'
-import imageWagon from '../../images/wagonimage.jpg'
 import { FaLocationDot } from 'react-icons/fa6'
 import { BsSpeedometer2, BsCalendar4 } from 'react-icons/bs'
 import Anuncio from '@/interface/interface'
 
 export default function ListingCard(props:{anuncio: Anuncio}) {
+    const image:string =  props.anuncio.veiculoImg + ""
     return (
+        <a href={props.anuncio.url + ""}>
         <div className={styles.Card}>
-            <div><Image src={imageWagon} alt='aeea' className={styles.Image}/></div>
+            <div><Image src={image} alt='aeea' className={styles.Image}/></div>
             <div className={styles.Info}>
                 <h2 className={styles.Name}> {props.anuncio.veiculo} </h2>
                 <h3 className={styles.Price}> {"R$ " + props.anuncio.price} </h3>
@@ -20,5 +21,6 @@ export default function ListingCard(props:{anuncio: Anuncio}) {
                 <h3 className={styles.Location}> <FaLocationDot/> {props.anuncio.local}</h3>
             </div>
         </div>
+        </a>
     )
 }

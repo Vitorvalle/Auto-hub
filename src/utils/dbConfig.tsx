@@ -3,11 +3,12 @@ let uri = process.env.MONGODB_URI || ""
 
 const connectDb = async () => {
     try {
-        console.log ("paunocuentrando")
-        await mongoose.connect("mongodb://127.0.0.1:27017/autohub")
+        const connection = await mongoose.connect("mongodb://127.0.0.1:27017/autohub")
+        console.log ("entrou")
         console.log("Sucesso na conexão")
+        return connection
     } catch (error) {
-        console.log("paunocu")
+        console.log("n entrou")
     }
 }
 
