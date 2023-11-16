@@ -8,11 +8,11 @@ export default function Header(props: any) {
     return (
       <div>
         <div className={styles.header}>
-          <a href="/" className={styles.logo}>AutoHub</a>
+          <a href="/" className={styles.logo}></a>
           <div className={styles.headerright}>
             <a className={styles.Pesquisa} href="/"> <HiMagnifyingGlass/> Pesquisa</a>
             <a className={styles.Pesquisa} href="/result">Contact</a>
-            <a className={styles.Pesquisa} href="/login"><HiOutlineUser/>Login</a>
+            <a className={styles.Pesquisa} href="../login"><HiOutlineUser/>Login/Cadastrar</a>
           </div>
         </div>
       </div>
