@@ -1,0 +1,132 @@
+.container {
+    height: 660px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-image: url('../../images/fundoLogin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.areaLogin {
+    background-color: rgba(213, 213, 213, 0.9);
+    height: 450px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 6%;
+}
+
+.divEsquerda {
+    position: absolute;
+    height: 450px;
+    width: 24%;
+    background-color: rgba(0, 123, 211, 0.7);
+    border-top-left-radius: 20px;
+    border-end-start-radius: 20px;
+    float: left;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .areaLogin{
+        height: 225px;
+    }
+    .divEsquerda{
+        background-color: none;
+        height: 225px;
+    }
+    .divDireita {
+        display: none;
+        height: 0px;
+    }
+    .usuario,
+    .senha{
+        width: 175px;
+    }
+
+    .botaoCads{
+        margin-top: 50px;
+    }
+    
+}
+
+.botaoEntr:hover,
+.botaoCads:hover {
+    background-color: #005FAB; /* Cor diferente no hover */
+}
+
+.escritaLogin {
+    font-size: 24px;
+    margin-left: 16%;
+    margin-top: 35%;
+}
+
+.usuario {
+    color: #000;
+    margin-left: 16%;
+    margin-top: 7%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+}
+.usuario::placeholder{
+    color: #353535;
+}
+
+.senha {
+    color: #000;
+    margin-left: 16%;
+    margin-top: 5%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+
+}
+.senha::placeholder{
+    color: #353535;
+}
+
+.botaoEntr {
+    height: 22px;
+    width: 65px;
+    background-color: #007BD3;
+    border-radius: 10px;
+    margin-left: 16%;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    float: left;
+    margin-top: 15px;
+}
+
+.botaoCads {
+    height: 22px;
+    width: 110px;
+    background-color: #007BD3;
+    border-radius: 10px;
+    display: block;
+    margin-left: 49%;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    margin-top: 15px;
+}
+
+
+.divDireita {
+    height: 450px;
+    width: 385px;
+    float: right;
+    background-image: url('../../images/usuario.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

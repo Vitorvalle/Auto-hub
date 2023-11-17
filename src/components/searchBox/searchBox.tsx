@@ -1,6 +1,7 @@
 import { Button, Input, Select, SelectItem } from "@nextui-org/react";
 import styles from './styles.module.css'
 import {marcas} from "./data";
+import Link from "next/link";
 
 export default function SearchBox() {
     return(
@@ -29,13 +30,14 @@ export default function SearchBox() {
                 label='Estado'
                 placeholder="País inteiro">
                 </Input>
-                <Button className={styles.SearchButton}>
+                <Link className={styles.SearchButton}
+                href={{
+                    pathname: "./result"
+                    }}>
                 Buscar
-                </Button>
+                </Link>
             </div>
-            <div className="accordion">
-                <Button className={styles.AdvancedButton}> Pesquisa Avançada</Button>
-            </div>
+
         </div>
     )
 }

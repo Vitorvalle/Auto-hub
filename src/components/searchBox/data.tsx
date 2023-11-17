@@ -1,4 +1,4 @@
-import React from "react";
+
 export const marcas = [
   {label: "Chevrolet", value: "chevrolet"},
   {label: "Ford", value: "ford"},

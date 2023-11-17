@@ -1,21 +1,14 @@
 import React from 'react'
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import imageByIndex from './imageByIndex'
-import {Image} from "@nextui-org/react";
+import Image from "next/image";
 import styles from './styles.module.css';
-import imageCoupe from "../../images/coupeImage.jpg"
-import imageHatch from '../../images/hatchImage.jpg'
-import imageSedan from '../../images/sedanImage.jpg'
-import imageWagon from '../../images/wagonimage.jpg'
 
 
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
 }
-
-const images = [imageCoupe, imageHatch, imageSedan, imageWagon]
-const Cat = ["Coupe", "Hatch", "Sedan", "Wagon"]
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
@@ -25,16 +18,17 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className={styles.embla}>
       <div className={styles.embla__viewport} ref={emblaRef}>
         <div className={styles.embla__container}>
-          
+          {slides.map((index) => (
             <div className={styles.embla__slide}>
+               <h1 className={styles.cat}>placeholder</h1>
               <Image
                 className={styles.embla__slide__img}
-                src={imageHatch}
-                alt="teucu"
+                src={imageByIndex(index)}
+                alt=""
+                placeholder='blur'
               />
-              <h1>aaaa</h1>
             </div>
-
+          ))}
         </div>
       </div>
     </div>

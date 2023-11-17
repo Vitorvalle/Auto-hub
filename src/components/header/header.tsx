@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { HiMagnifyingGlass, HiOutlineUser } from 'react-icons/hi2'
 
 export default function Header(props: any) {
     return (
       <div>
         <div className={styles.header}>
-          <a href="#default" className={styles.logo}>CompanyLogo</a>
-          <div className='header-right'>
-            <a className={styles.active} href="#home">Home</a>
-            <a href="#contact">Contact</a>
-            <a href="/login">Login</a>
+          <a href="/" className={styles.logo}></a>
+          <div className={styles.headerright}>
+            <a className={styles.Pesquisa} href="/"> <HiMagnifyingGlass/> Pesquisa</a>
+            <a className={styles.Pesquisa} href="../login"><HiOutlineUser/>Login</a>
           </div>
         </div>
       </div>

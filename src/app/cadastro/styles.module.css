@@ -1,0 +1,127 @@
+.container {
+    height: 660px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-image: url('../../images/fundoLogin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.areaLogin {
+    background-color: rgba(213, 213, 213, 0.9);
+    height: 450px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 6%;
+}
+
+.divCima{
+    height: 315px;
+    width: 100%;
+}
+
+.cimaEsquerda{
+    height: 315px;
+    width: 50%;
+    float: left;
+    border-top-left-radius: 20px;
+}
+
+.cimaDireita{
+    border-top-right-radius: 20px;
+    height: 315px;
+    width: 50%;
+
+    float: right;
+}
+
+
+.usuario{
+    color: #000;
+    margin-left: 16%;
+    margin-top: 35%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.email{
+    color: #000;
+    margin-left: 16%;
+    margin-top: 7%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.senha{
+    color: #000;
+    margin-left: 16%;
+    margin-top: 35%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.senha2{
+    color: #000;
+    margin-left: 16%;
+    margin-top: 7%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.usuario::placeholder{
+    color: #000;
+}
+.email::placeholder{
+    color: #000;
+}
+.senha::placeholder{
+    color: #000;
+}
+.senha2::placeholder{
+    color: #000;
+}
+
+.botaoEntr {
+    height: 22px;
+    width: 65px;
+    background-color: #007BD3;
+    border-radius: 10px;
+    margin-left: 40%;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    float: left;
+    margin-top: 15px;
+}.botaoEntr::hover{
+    background-color: #005FAB;
+}
+
+
+.divBaixo{
+    height: 135px;
+    width: 100%;
+    background-color: #007BD3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: url('../../images/usuario.png');
+    background-size: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
