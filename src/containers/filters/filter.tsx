@@ -1,73 +1,103 @@
 'use client'
 import { InputAdv1, InputAdv2, InputAdv3 } from "@/components/input/input";
-import { Button, Select, Tab, Tabs } from "@nextui-org/react";
+import { Button, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import styles from "./styles.module.css"
 
 
-export default function Filter() {
-    return(
+export default function Filter(props: { modelo: string, changeFn: any }) {
+    function handleModelChange(event: any) {
+        props.changeFn(event.target.value);
+    }
+
+    const veiculos = [
+        {label:"Fusca", value: "Fusca"},
+        {label:"Opala", value: "Opala"},
+        {label:"Astra", value: "Astra"},
+        {label:"Lada Laika", value: "Laika"},
+        {label:"Fiat Siena", value: "Siena"},
+        {label:"Celta", value: "Celta"},
+        {label:"Corsa", value: "Corsa"},
+        {label:"Nissan Kicks", value: "Kicks"},
+        {label:"Toyota Corolla", value: "Corolla"},
+        {label:"Volkswagen Amarok", value: "Amarok"},
+        {label:"Fiat Argo", value: "Argo"},
+        {label:"Volkswagen Voyage", value: "Voyage"},
+        {label:"Volkswagen Polo", value: "Polo"},
+        {label:"Veloster", value: "Golf"},
+        {label:"Volkswagen Golf", value: "Golf"},
+        {label:"HB20", value: "HB20"},
+        {label:"Chevrolet Onix", value: "Onix"}
+    ]
+    return (
         <div className={styles.Filters}>
             <h2 className={styles.head}>Filtros de pesquisa</h2>
-                <Select
+            <Select
                 className={styles.input}
                 label="Marca"
                 placeholder="Qualquer marca">
-                </Select>
+            </Select>
 
-                <Select
+            <Select
                 className={styles.input}
                 label="Modelo"
-                placeholder="Qualquer modelo">
-
-                </Select>
-                <Select
+                placeholder="Qualquer modelo"
+                value={props.modelo}
+                onChange={handleModelChange}
+            >
+                {veiculos.map((carro) => (
+                    <SelectItem key={carro.value} value={carro.value}>
+                        {carro.label}
+                    </SelectItem>
+                ))}
+            </Select>
+            <Select
                 className={styles.input}
                 label='Estado'
                 placeholder="País inteiro">
-                </Select>          
+            </Select>
 
-                <Select
+            <Select
                 className={styles.input}
                 label="Versao"
                 placeholder="Qualquer versao">
-                </Select>
+            </Select>
 
-                <Select
+            <Select
                 className={styles.input}
                 label="Tag"
                 placeholder="Ex. modificado, rebaixado">
 
-                </Select>
-                <Select
+            </Select>
+            <Select
                 className={styles.input}
                 label='Combustivel'
                 placeholder="Qualquer">
-                </Select>
+            </Select>
 
-                <InputAdv1 sidebar={true}/>
-                <InputAdv2 sidebar={true}/>
-                <InputAdv3 sidebar={true}/>
+            <InputAdv1 sidebar={true} />
+            <InputAdv2 sidebar={true} />
+            <InputAdv3 sidebar={true} />
 
-                <Tabs className={styles.Tags} fullWidth={true}>
-                    <Tab className={styles.aaa} title="automatico"></Tab>
-                    <Tab className={styles.aaa}title="manuel"></Tab>
-                </Tabs>
-                <Tabs className={styles.Tags} fullWidth={true}>
-                    <Tab className={styles.aaa} title="concessionaria"></Tab>
-                    <Tab className={styles.aaa}title="particular"></Tab>
-                </Tabs>
-                <Select
+            <Tabs className={styles.Tags} fullWidth={true}>
+                <Tab className={styles.aaa} title="automatico"></Tab>
+                <Tab className={styles.aaa} title="manuel"></Tab>
+            </Tabs>
+            <Tabs className={styles.Tags} fullWidth={true}>
+                <Tab className={styles.aaa} title="concessionaria"></Tab>
+                <Tab className={styles.aaa} title="particular"></Tab>
+            </Tabs>
+            <Select
                 className={styles.input}
                 label='Cor'
                 placeholder="Qualquer cor">
-                </Select>
+            </Select>
 
-                <Button className={styles.ClearButton}>
+            <Button className={styles.ClearButton}>
                 Limpar
-                </Button>
-                <Button className={styles.SearchButton}>
+            </Button>
+            <Button className={styles.SearchButton}>
                 Buscar
-                </Button>
+            </Button>
         </div>
     )
 }

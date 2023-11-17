@@ -5,9 +5,10 @@ import Anuncio from "@/interface/interface";
 import { useState } from "react";
 
 
-export default function ListResult(props: {origem: String, anuncios: Anuncio[]}) {
+export default function ListResult(props: {origem: String, anuncios: Anuncio[], modeloFilt: string}) {
 
-    const anunciosFilt = props.anuncios.filter((anuncio: Anuncio) => anuncio.origem == props.origem)
+    const anunciosFilt = props.anuncios.filter((anuncio: Anuncio) => ((anuncio.origem == props.origem) 
+    && (anuncio.veiculo.toUpperCase().includes(props.modeloFilt.toUpperCase() ))))
     const [cont, setcont] = useState(20)
     function aooo() {
         setcont(cont + 20);
