@@ -20,8 +20,8 @@ export default function SearchBox() {
 
                 <Select
                 className={styles.input}
-                label="Marca"
-                placeholder="Qualquer marca">
+                label="Modelo"
+                placeholder="Qualquer modelo">
 
                 </Select>
                 <Input
