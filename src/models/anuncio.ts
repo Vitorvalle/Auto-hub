@@ -5,12 +5,14 @@ const AnuncioSchema = new Schema(
         veiculo: String,
         url: String,
         price: Number,
-        local: String, 
+        local: String,
+        km: Number,
+        ano: Number, 
         veiculoImg: String,
         origem: String
     }
 )
 
-const Anuncio = mongoose.model("veiculos", AnuncioSchema)
 
-export default Anuncio
+
+export default mongoose.model("veiculos", AnuncioSchema)

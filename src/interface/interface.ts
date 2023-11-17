@@ -3,6 +3,8 @@ type Anuncio = {
         url: String,
         price: Number,
         local: String, 
+        ano: Number,
+        km: Number,
         veiculoImg: String,
         origem: String
 }

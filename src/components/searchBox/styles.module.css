@@ -22,9 +22,11 @@
   
   .SearchButton {
     background-color: gold;
-    font:bold;
+    font-weight:bold;
     width: 170px ;
     height: 55px;
+    border-radius: 10px;
+    text-align: center;
   }
   
   .select {

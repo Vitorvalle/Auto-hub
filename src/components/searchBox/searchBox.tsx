@@ -32,10 +32,8 @@ export default function SearchBox() {
                 </Input>
                 <Link className={styles.SearchButton}
                 href={{
-                    pathname: "./result",
-                    query: {
-                        modelo: "fusca"
-                    }}}>
+                    pathname: "./result"
+                    }}>
                 Buscar
                 </Link>
             </div>
