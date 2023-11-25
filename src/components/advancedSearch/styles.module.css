@@ -38,7 +38,7 @@
 
 .SearchButton {
     background-color: gold;
-    font:bold;
+    font-weight: bold;
     margin-left: 5px;
     width: 170px ;
     height: 55px;

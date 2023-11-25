@@ -19,6 +19,7 @@ export default async function Result() {
     const {anuncios} = await getAnuncios();
     return(
         <>
+
             <ListingsWrapper anuncios={anuncios}/>
         </>
     )

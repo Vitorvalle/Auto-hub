@@ -51,7 +51,7 @@ export default function AdvancedSearch() {
             <div className={styles.Line2}>
                 <Tabs className={styles.Tags} fullWidth={true}>
                     <Tab className={styles.aaa} title="automatico"></Tab>
-                    <Tab className={styles.aaa}title="manuel"></Tab>
+                    <Tab className={styles.aaa}title="manual"></Tab>
                 </Tabs>
                 <Tabs className={styles.Tags} fullWidth={true}>
                     <Tab className={styles.aaa} title="concessionaria"></Tab>

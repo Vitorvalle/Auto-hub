@@ -8,13 +8,13 @@ export async function GET(req:NextRequest, res: NextResponse) {
     const db = await connectDb();
     const anuncios = await Anuncio.aggregate([
         { $match: { origem: "ML" } },
-        { $sample: { size: 150 } },
+        { $sample: { size: 500 } },
         {
           $unionWith: {
             coll: "veiculos",
             pipeline: [
               { $match: { origem: "OLX" } },
-              { $sample: { size: 150 } }
+              { $sample: { size: 500 } }
             ]
           }
         }

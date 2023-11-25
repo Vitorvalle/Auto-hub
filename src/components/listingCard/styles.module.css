@@ -22,12 +22,16 @@
     height: 250px;
     width: 300px;
     object-fit:cover;
-    overflow: hidden;
+
 }
 
 
 .Name {
     font-size: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 600px;
 }
 
 .Price {
@@ -38,13 +42,12 @@
     display: flex;
     flex-direction: row;
     font-size: 20px;
-    bottom: 10%;
 }
 
 .subInfo {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 
 .KM {

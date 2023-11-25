@@ -13,20 +13,20 @@ export default function Filter(props: { modelo: string, changeFn: any }) {
         {label:"Fusca", value: "Fusca"},
         {label:"Opala", value: "Opala"},
         {label:"Astra", value: "Astra"},
-        {label:"Lada Laika", value: "Laika"},
-        {label:"Fiat Siena", value: "Siena"},
+        {label:"Laika", value: "Laika"},
+        {label:"Siena", value: "Siena"},
         {label:"Celta", value: "Celta"},
         {label:"Corsa", value: "Corsa"},
-        {label:"Nissan Kicks", value: "Kicks"},
-        {label:"Toyota Corolla", value: "Corolla"},
-        {label:"Volkswagen Amarok", value: "Amarok"},
-        {label:"Fiat Argo", value: "Argo"},
-        {label:"Volkswagen Voyage", value: "Voyage"},
-        {label:"Volkswagen Polo", value: "Polo"},
+        {label:"Kicks", value: "Kicks"},
+        {label:"Corolla", value: "Corolla"},
+        {label:"Amarok", value: "Amarok"},
+        {label:"Argo", value: "Argo"},
+        {label:"Voyage", value: "Voyage"},
+        {label:"Polo", value: "Polo"},
         {label:"Veloster", value: "Golf"},
-        {label:"Volkswagen Golf", value: "Golf"},
+        {label:"Golf", value: "Golf"},
         {label:"HB20", value: "HB20"},
-        {label:"Chevrolet Onix", value: "Onix"}
+        {label:"Onix", value: "Onix"}
     ]
     return (
         <div className={styles.Filters}>
