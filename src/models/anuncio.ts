@@ -11,8 +11,7 @@ const AnuncioSchema = new Schema(
         veiculoImg: String,
         origem: String
     }
-)
+);
 
-
-
-export default mongoose.model("veiculos", AnuncioSchema)
+const Anuncio = mongoose.models.veiculos || mongoose.model("veiculos", AnuncioSchema)
+export default Anuncio;
