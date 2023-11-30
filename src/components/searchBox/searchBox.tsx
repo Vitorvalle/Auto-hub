@@ -4,11 +4,12 @@ import {marcas, modelos} from "./data";
 import Link from "next/link";
 import {useState} from 'react'
 
+var marcaFiltro = ""
 export default function SearchBox() {
 const [marcaFilt, setMarca] = useState('');
 const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setMarca(event.target.value);
-
+    marcaFiltro = marcaFilt
     console.log(event.target.value)
 }
 
@@ -52,5 +53,11 @@ const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
             </div>
 
         </div>
+    )
+}
+
+export function filtrar(marca: string) {
+    return(
+    marca = marcaFiltro
     )
 }
