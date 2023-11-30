@@ -44,7 +44,6 @@ const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
                 placeholder="País inteiro">
                 </Input>
                 <Link className={styles.SearchButton}
-                onClick={handleClick}
                 href={{
                     pathname: "./result"
                     }}>

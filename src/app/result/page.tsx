@@ -6,7 +6,7 @@ import ListingsWrapper from "@/components/listingsWrapper/wrapper"
 export default async function Result() {
     const getAnuncios = async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/anuncios', {cache: 'no-store'});
+            const res = await fetch('http://localhost:3000/api/anuncios?ano=2010', {cache: 'no-store'});
             if(!res.ok){
                 throw new Error("falha em buscar anuncios ok")
             }
