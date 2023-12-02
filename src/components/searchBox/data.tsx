@@ -9,10 +9,16 @@ export const marcas = [
 ];
 
 export const modelos = [
-  {marca: "", label: "laika", value: ""},
-  {marca: "", label: "laika", value: ""},
-  {marca: "", label: "laika", value: ""},
-  {marca: "", label: "laika", value: ""},
-  {marca: "", label: "laika", value: ""},
-  {marca: "", label: "laika", value: ""},
+  {label: "Laika", value: "LAIKA"},
+  {label: "Astra", value: "ASTRA"},
+  {label: "Opala", value: "OPALA"},
+  {label: "Polo", value: "POLO"},
+  {label: "Corsa", value: "CORSA"},
+  {label: "Kicks", value: "KICKS"},
+
+]
+
+export const estados = [
+  {label: "Paraná", value: "PARANA"},
+  {label: "São Paulo", value: "SAO_PAULO"}
 ]

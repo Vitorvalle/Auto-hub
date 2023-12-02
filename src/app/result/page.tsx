@@ -2,11 +2,10 @@ import React from "react"
 import ListingsWrapper from "@/components/listingsWrapper/wrapper"
 
 
-
-export default async function Result() {
+export default async function Result(req: any) {
     const getAnuncios = async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/anuncios', {cache: 'no-store'});
+            const res = await fetch('http://localhost:3000/api/anuncios?' + req.searchParams.query, {cache: 'no-store'});
             if(!res.ok){
                 throw new Error("falha em buscar anuncios ok")
             }
