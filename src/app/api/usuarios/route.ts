@@ -18,8 +18,9 @@ export async function GET(){
     return NextResponse.json({usuarios});
 }
 
-export async function DELETE(req: Request){
-    const id = Request.nextUrl.searchParams.get("id");
+export async function DELETE( req: any){
+    const id = req.url.split("?")[1];
+    console.log(id);
     await connectDb();
     await Usuario.findByIdAndDelete(id);
     return NextResponse.json({message: "Usuario deletado"}, {status: 200});
