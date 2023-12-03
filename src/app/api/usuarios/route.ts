@@ -37,21 +37,19 @@ export async function DELETE( req: any, res: any){
     }
 }
 
-export async function UPDATE(req: any, res: any){
-    const id = req.params.id;
-
-    const service = {
-        nome: req.nome,
-        email: req.email,
-        senha: req.senha,
-    };
-
-    const updateService = await Usuario.findByIdAndUpdate(id, service);
+export async function PUT(req: any, res: any){
+    const id = req.url.split("?")[1];
+    console.log(id);
+    await connectDb();
+    const update = await req.json();
+    console.log(JSON.stringify(update));
+    await Usuario.findByIdAndUpdate(id, update);
+    return NextResponse.json({message: "Usuario alterado"}, {status: 200});
 
     if (!Usuario) {
         res.status(404).json({message: "usuário não encontrado"});
         return;
     }
 
-    res.status(200).json({service, msg: "Usuário atualziado"})
+    res.status(200).json({ msg: "Usuário atualziado"})
 }
