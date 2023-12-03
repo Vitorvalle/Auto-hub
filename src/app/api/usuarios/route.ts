@@ -10,11 +10,6 @@ export async function POST(req: any, res: any) {
     await connectDb();
     await Usuario.create({nome, email, senha})
     return NextResponse.json({message: "Usuario cadastrado"}, {status: 201});
-
-    if (!Usuario) {
-        res.status(404).json({message: "Serviço não encontrado"});
-        return;
-    }
 }
 
 export async function GET(res: any){
