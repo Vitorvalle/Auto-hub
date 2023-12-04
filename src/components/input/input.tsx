@@ -1,7 +1,7 @@
 import {Input} from "@nextui-org/react"
 import styles from "./styles.module.css"
 
-export function InputAdv1(props: {sidebar: boolean}) {
+export function InputAdv1(props: {sidebar: boolean, anoFiltroMin: Number, asnoFitlroMax: Number}) {
     return(
         <div className={props.sidebar ? styles.InputSideBar : styles.InputBox}>
             <Input

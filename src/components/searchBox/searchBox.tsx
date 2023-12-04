@@ -1,7 +1,6 @@
-import { Button, Input, Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem, Button } from "@nextui-org/react";
 import styles from './styles.module.css'
 import {marcas, modelos, estados} from "./data";
-import Link from "next/link";
 import {useState} from 'react'
 import { useRouter } from "next/navigation";
 
@@ -9,6 +8,12 @@ const query = {
     modelo: "",
     marca: "",
     estado: "",
+    precoMin: "0",
+    precoMax: "99999999999999999",
+    anoMin: "0",
+    anoMax: "2023",
+    kmMin: "0",
+    kmMax: "999999999999"
 }
 
 export default function SearchBox() {
@@ -47,7 +52,13 @@ const handleClick = () => {
     router.push('/result?query=' + url64)
 }
 
-
+const modelosSelect = modelos.filter((modelo) => {
+    if (marcaFilt != ''){
+       return modelo.marca === marcaFilt
+    } else {
+        return modelos
+    }
+})
 
     return(
         <div className={styles.SearchBox}>
@@ -70,7 +81,7 @@ const handleClick = () => {
                 onChange={handleChangeModel}
                 placeholder="Qualquer modelo"
                 value={modelFilt}>
-                    {modelos.map((modelo) => (
+                    {modelosSelect.map((modelo) => (
                         <SelectItem key={modelo.value} value={modelo.value}>
                             {modelo.label}
                         </SelectItem>
@@ -88,10 +99,10 @@ const handleClick = () => {
                         </SelectItem>
                     ))}
                 </Select>
-                <div className={styles.SearchButton}
+                <Button className={styles.SearchButton}
                 onClick={handleClick}>
                 Buscar
-                </div>
+                </Button>
             </div>
 
         </div>

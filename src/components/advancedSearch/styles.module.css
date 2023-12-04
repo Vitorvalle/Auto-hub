@@ -66,6 +66,19 @@
     padding-right: 5px;
 }
 
+.input2 {
+  width: 50%;
+}
+
+.inputBox {
+  width: 34%;
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+  background-color: whitesmoke;
+  border-radius: 30px 30px 30px 30px;
+}
+
 @media (max-width: 700px) {
   .SearchBox{
     height: 910px;
@@ -104,5 +117,9 @@
   .SearchButton{
     padding: 0px;
     width: 90%;
+  }
+  .InputBox{
+    width: 90%;
+    padding-bottom: 5px;
   }
 }
