@@ -18,8 +18,13 @@ export default async function Result(req: any) {
     const {anuncios} = await getAnuncios() || undefined || {};
     return(
         <>
-
-            <ListingsWrapper anuncios={anuncios}/>
+            <head>
+                <meta charSet='utf-8' />
+                <title>Resultados</title>
+            </head>
+            <body> 
+                <ListingsWrapper anuncios={anuncios}/>
+            </body>
         </>
     )
 }

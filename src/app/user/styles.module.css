@@ -1,0 +1,12 @@
+.imageBox{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    clip-path: inset(100px 0px 0px);
+    height: 250px;
+    margin-top: -20px;
+}
+
+.image {
+    object-fit: cover;
+}

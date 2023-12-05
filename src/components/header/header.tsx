@@ -9,7 +9,7 @@ export default function Header(props: any) {
           <a href="/" className={styles.logo}></a>
           <div className={styles.headerright}>
             <a className={styles.Pesquisa} href="/"> <HiMagnifyingGlass/> Pesquisa</a>
-            <a className={styles.Pesquisa} href="../login"><HiOutlineUser/>Login</a>
+            <a className={styles.Pesquisa} href="../user"><HiOutlineUser/>Login</a>
           </div>
         </div>
       </div>

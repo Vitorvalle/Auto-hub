@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { estados, marcas, modelos } from './data';
 import styles from './styles.module.css'
 import { Button, Input, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const query = {
     modelo: "",

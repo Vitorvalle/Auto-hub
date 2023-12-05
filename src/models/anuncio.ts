@@ -2,6 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const AnuncioSchema = new Schema(
     {
+        id: String,
         veiculo: String,
         url: String,
         price: Number,
