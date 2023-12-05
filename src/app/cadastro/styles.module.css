@@ -42,21 +42,25 @@
 
 .usuario{
     color: #000;
-    margin-left: 5%;
+    margin-left: 16%;
     margin-top: 35%;
-    background-color: white;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
     display: flex;
-    border-radius: 10px;
 }
 
 .email{
     color: #000;
-    margin-left: 5%;
+    margin-left: 16%;
     margin-top: 7%;
-    width: 260px;
-    background-color: white;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
     display: flex;
-    border-radius: 10px;
+    margin-bottom: 15px;
 }
 .senha{
     color: #000;

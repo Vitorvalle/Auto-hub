@@ -6,7 +6,8 @@ import { useState, FormEvent } from 'react';
 import WelcomeImage from '@/components/welcomeImage/welcomeImage';
 import styles from './styles.module.css'
 import Header from '@/components/header/header';
-import { HiMagnifyingGlass, HiOutlineUser } from 'react-icons/hi2'
+import { HiMagnifyingGlass, HiOutlineUser } from 'react-icons/hi2';
+import { redirect } from 'next/navigation' 
 
 
 const Cadastro = () => {
@@ -15,10 +16,13 @@ const Cadastro = () => {
   const [senha, setSenha] = useState('');
   const [confSenha, setConfSenha] = useState('');
 
+  const handleClick = () =>{
+    window.location.replace("/login");
+  }
+  
   // Função para lidar com o envio do formulário
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
     // Construa o objeto de dados a ser enviado para o backend
     const data = {
       nome,
@@ -55,8 +59,6 @@ const Cadastro = () => {
     return validateEmail(value) ? false : true;
   }, [value]);
 
-  const variants = ["flat", "bordered", "underlined", "faded"];
-
   return (
     <div>
       <div>
@@ -76,16 +78,12 @@ const Cadastro = () => {
                   value={nome}
                   onChange={(e) => setUsuario(e.target.value)}
                 />
-                <Input
+                <input
                   className={styles.email}
+                  type='email'
+                  name='email'
+                  placeholder='E-mail'
                   value={email}
-                  placeholder="Email"
-                  type="email"
-                  variant={"underlined"}
-                  isInvalid={isInvalid}
-                  color={isInvalid ? "danger" : "success"}
-                  errorMessage={isInvalid && "Esse e-mail não é válido"}
-                  onValueChange={setValue}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -108,7 +106,7 @@ const Cadastro = () => {
                   value={confSenha}
                   onChange={(e) => setConfSenha(e.target.value)}
                 />
-                <button className={styles.botaoEntr} type='submit'>
+                <button className={styles.botaoEntr} type='submit' onClick={handleClick}>
                   Cadastrar
                 </button>
               </div>

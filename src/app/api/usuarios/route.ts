@@ -4,11 +4,15 @@ import {NextRequest, NextResponse } from 'next/server';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { filtrar } from '@/components/searchBox/searchBox';
 import Usuario from '@/models/usuarios';
+import bcrypt, { hash } from "bcrypt";
 
 export async function POST(req: any, res: any) {
     const {nome, email, senha} =  await req.json();
+
+    const passwordHash = await hash(senha, 8);
+
     await connectDb();
-    await Usuario.create({nome, email, senha})
+    await Usuario.create({nome, email, senha: passwordHash,})
     return NextResponse.json({message: "Usuario cadastrado"}, {status: 201});
 }
 
