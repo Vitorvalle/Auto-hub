@@ -27,8 +27,6 @@ export default function SignIn() {
                     </div>
 
                     <div className={styles.divDireita}></div>
-
-
                 </div>
             </div>
         </div>

@@ -42,26 +42,22 @@
 
 .usuario{
     color: #000;
-    margin-left: 16%;
+    margin-left: 5%;
     margin-top: 35%;
-    border: none;
-    border-bottom: 1px solid #000;
-    outline: none;
-    background-color: transparent;
+    background-color: white;
     display: flex;
+    border-radius: 10px;
 }
 
 .email{
     color: #000;
-    margin-left: 16%;
+    margin-left: 5%;
     margin-top: 7%;
-    border: none;
-    border-bottom: 1px solid #000;
-    outline: none;
-    background-color: transparent;
+    width: 260px;
+    background-color: white;
     display: flex;
+    border-radius: 10px;
 }
-
 .senha{
     color: #000;
     margin-left: 16%;
@@ -89,7 +85,7 @@
     color: #000;
 }
 .email::placeholder{
-    color: #000;
+    color: #000000;
 }
 .senha::placeholder{
     color: #000;
@@ -100,7 +96,7 @@
 
 .botaoEntr {
     height: 22px;
-    width: 65px;
+    width: 84px;
     background-color: #007BD3;
     border-radius: 10px;
     margin-left: 40%;
@@ -125,3 +121,4 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
