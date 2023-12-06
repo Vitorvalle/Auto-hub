@@ -1,4 +1,4 @@
-type Anuncio = {
+export type Anuncio = {
         veiculo: String,
         url: String,
         price: Number,
@@ -9,5 +9,11 @@ type Anuncio = {
         origem: String
 }
 
-export default Anuncio
+export type Usuario = {
+        nome: String,
+        email: String,
+        senha: String,
+        createdDate: Date,
+        salvos: [String]
+}
 

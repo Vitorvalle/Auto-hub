@@ -1,8 +1,6 @@
 import React from 'react'
-import WelcomeImage from '@/components/welcomeImage/welcomeImage';
 import styles from './styles.module.css'
-import Header from '@/components/header/header';
-import { HiMagnifyingGlass, HiOutlineUser } from 'react-icons/hi2'
+
 
 
 export default function SignIn() {

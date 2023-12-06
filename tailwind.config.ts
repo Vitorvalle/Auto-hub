@@ -28,7 +28,6 @@ module.exports = {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
-            danger : '#ff0000',
             background: ""
           }, // light theme colors
         },

@@ -1,35 +1,18 @@
-
 import welcome from '../../images/tipos-de-carros-capa.png';
 import { options } from '../api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next'
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { redirect } from 'next/navigation';
-import Anuncio from '@/interface/interface';
-import ListingCard from '@/components/listingCard/listingCard';
+import Link from 'next/link';
+import { HiOutlineUserCircle } from 'react-icons/hi2';
 
 export default async function User() {
-    const getAnunciosSalvos = async () => {
-        try {
-            const res = await fetch('http://localhost:3000/api/salvos' , {cache: 'no-store'});
-            if(!res.ok){
-                throw new Error("falha em buscar anuncios ok")
-            }
-            const x = await res.json()
-            return x
-        } catch(error) {
-            console.log("erro em carregar", error)
-        }
-    }
-    const {anuncios} = await getAnunciosSalvos() || undefined || {};
-    console.log(anuncios)
     const session = await getServerSession(options)
-
     if(!session) {
         redirect('/api/auth/singin?callbackUrl=/user')
     }
-
-    const anunciosSalvos = anuncios
+    console.log(session.user)
     return (
         <div>
             <head>
@@ -48,13 +31,22 @@ export default async function User() {
                     fill={false}></Image>
                 </div>
                 {session ? (
-                    <div className={styles.List}>
-                    <h2 className={styles.Origin}>Resultados</h2>
-                    {anunciosSalvos.map((t:Anuncio) =>(
-                        <ListingCard anuncio={t} />
-                    ))
-                    }  
-                </div>
+                    <div className={styles.tela}>
+                        <div className={styles.sidebar}>
+                            <span className={styles.avatar}>N</span>
+                            <h2 className={styles.name}>
+                                Nome
+                            </h2>
+                            <a className={styles.dadosButton}><HiOutlineUserCircle/> Dados Pessoais</a>
+                            <Link  href={'/salvos'} className={styles.salvosButton}>Anuncios Salvos</Link>
+                        </div>
+                        <div className={styles.userCard}>
+                            <h2 className={styles.title}>Dados Pessoais</h2>
+                            <a className={styles.userInfo}>Nome: {session.user?.email}</a>
+                            <a className={styles.userInfo}>Email: {session.user?.name}</a>
+                            <a className={styles.userInfo}>Usuario desde:  </a>
+                        </div>
+                    </div>
                 ) : (
                     <h1>Acesso negado</h1>
                 )}

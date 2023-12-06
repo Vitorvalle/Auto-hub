@@ -7,6 +7,7 @@ import About from '@/containers/about/about';
 import Search from '@/containers/search/search';
 import WelcomeImage from '@/components/welcomeImage/welcomeImage';
 
+
 const OPTIONS: EmblaOptionsType = { dragFree: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())

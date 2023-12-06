@@ -3,7 +3,7 @@ import {Image} from "@nextui-org/react"
 import styles from './styles.module.css'
 import { FaLocationDot } from 'react-icons/fa6'
 import { BsSpeedometer2, BsCalendar4 } from 'react-icons/bs'
-import Anuncio from '@/interface/interface'
+import {Anuncio} from '@/interface/interface'
 
 export default function ListingCard(props:{anuncio: Anuncio}) {
     const image:string =  props.anuncio.veiculoImg + ""
