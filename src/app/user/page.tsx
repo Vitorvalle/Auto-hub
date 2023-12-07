@@ -54,9 +54,8 @@ export default async function User() {
                         </div>
                         <div className={styles.userCard}>
                             <h2 className={styles.title}>Dados Pessoais</h2>
-                            <a className={styles.userInfo}>Nome: {session.user?.email}</a>
-                            <a className={styles.userInfo}>Email: {user.id}</a>
-                            <a className={styles.userInfo}>Usuario desde:  </a>
+                            <a className={styles.userInfo}>Nome: {session.user?.name}</a>
+                            <a className={styles.userInfo}>Email: {session.user?.email}</a>
                             {session && <pre>{JSON.stringify(session, null, 2)}</pre>}
                         </div>
                     </div>

@@ -1,15 +1,13 @@
 import connectDb from '@/utils/dbConfig';
 import {NextRequest, NextResponse } from 'next/server';
 import Usuario from '@/models/usuarios';
-import bcrypt, { hash } from "bcrypt";
+
 
 export async function POST(req: any, res: any) {
     const {nome, email, senha} =  await req.json();
 
-    const passwordHash = await hash(senha, 8);
-
     await connectDb();
-    await Usuario.create({nome, email, senha: passwordHash,})
+    await Usuario.create({nome, email, senha})
     return NextResponse.json({message: "Usuario cadastrado"}, {status: 201});
 }
 
@@ -25,16 +23,6 @@ export async function GET(res: any){
 
 }
 
-export async function GETBYID(req: any, res:any) {
-    const id = req.url.split("?")[1];
-    await connectDb();
-    const usuario = await Usuario.findById(id)
-    return NextResponse.json({usuario}, {status: 200});
-    if (!Usuario) {
-        res.status(404).json({message: "usuário não encontrado"});
-        return;
-    }
-}
 
 export async function DELETE( req: any, res: any){
     const id = req.url.split("?")[1];

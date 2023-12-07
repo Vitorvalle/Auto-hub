@@ -21,7 +21,7 @@ export default async function Header(props: any) {
   if(!session) {
     Label = "Login"
   } else {
-    Label = session.user?.email
+    Label = session.user?.name
   }
   const user = JSON.stringify(session)
   console.log(user)
