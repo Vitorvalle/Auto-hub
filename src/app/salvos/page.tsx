@@ -1,13 +1,12 @@
-import welcome from '../../images/tipos-de-carros-capa.png';
 import { options } from '@/app/api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next'
 import styles from "./styles.module.css";
-import Image from "next/image";
 import { redirect } from 'next/navigation';
-import Anuncio from '@/interface/interface';
+import {Anuncio} from '@/interface/interface';
 import ListingCard from '@/components/listingCard/listingCard';
 import Link from 'next/link';
 import { HiOutlineUserCircle } from 'react-icons/hi2';
+import { FaRegHeart } from 'react-icons/fa';
 
 export default async function Salvos() {
     const getAnunciosSalvos = async () => {
@@ -46,7 +45,7 @@ export default async function Salvos() {
                                     Nome
                                 </h2>
                                 <Link  href={'/user'} className={styles.dadosButton}><HiOutlineUserCircle/> Dados Pessoais</Link>
-                                <a className={styles.salvosButton}>Anuncios Salvos</a>
+                                <a className={styles.salvosButton}><FaRegHeart/>Anuncios Salvos</a>
                         </div>
                         <div className={styles.List}>
                             <h2 className={styles.title}>Anuncios Salvos</h2>
