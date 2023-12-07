@@ -1,7 +1,7 @@
 'use client'
 import ListingCard from "@/components/listingCard/listingCard";
 import styles from "./styles.module.css"
-import Anuncio from "@/interface/interface";
+import {Anuncio} from "@/interface/interface";
 import { useState } from "react";
 
 
