@@ -1,5 +1,4 @@
 'use client'
-import { InputAdv1, InputAdv2, InputAdv3 } from "@/components/input/input";
 import { Button, Input, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import styles from "./styles.module.css"
 import { estados, marcas, modelos } from "./data";
