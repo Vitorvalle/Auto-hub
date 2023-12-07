@@ -46,19 +46,6 @@
     margin-bottom: 20px;
 }
 
-.salvosButton {
-    display: flex;
-    flex-direction: row;
-    font-size: larger;
-    font-weight:500;
-    color: gray;
-
-}
-
-.salvosButton:hover {
-    text-decoration: underline;
-}
-
 .dadosButton {
     display: flex;
     flex-direction: row;
@@ -88,3 +75,5 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+

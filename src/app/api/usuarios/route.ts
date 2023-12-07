@@ -4,7 +4,7 @@ import Usuario from '@/models/usuarios';
 
 
 export async function POST(req: any, res: any) {
-    const {nome, email, senha} =  await req.json();
+    const {nome, email, senha, salvos:[]} =  await req.json();
 
     await connectDb();
     await Usuario.create({nome, email, senha})

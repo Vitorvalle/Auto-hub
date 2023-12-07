@@ -2,7 +2,7 @@
 import Filter from "@/containers/filters/filter";
 import ListResult from "@/containers/ListResults/listResult";
 import styles from "../../app/result/styles.module.css"
-import Anuncio from "@/interface/interface";
+import {Anuncio} from "@/interface/interface";
 import { useState } from "react";
 
 export default function ListingsWrapper(props: { anuncios: Anuncio[]}) {

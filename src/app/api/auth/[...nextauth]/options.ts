@@ -11,6 +11,7 @@ export const options: NextAuthOptions = {
                 if (user) {
                     return {
                         ...token,
+                        name: customUser.nome,
                         salvos: customUser.salvos
                     }
                 }
@@ -65,7 +66,6 @@ export const options: NextAuthOptions = {
                     if (user.email == credentials?.username)
                     return user
                 })
-                console.log(filtUser)
                 if(credentials?.username === filtUser?.email && credentials?.password === filtUser?.senha){
                     return filtUser
                 } else {

@@ -1,11 +1,13 @@
+
 import welcome from '../../images/tipos-de-carros-capa.png';
 import { options } from '../api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next'
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { redirect } from 'next/navigation';
-import Link from 'next/link';
 import { HiOutlineUserCircle } from 'react-icons/hi2';
+import SignOut from '@/components/modal/modal';
+import ButtonSalvos from '@/components/buttonSalvos/buttonSalvos';
 
 export default async function User() {
     const session = await getServerSession(options)
@@ -17,14 +19,19 @@ export default async function User() {
     const userSession = JSON.stringify(session.user, null, 2)
     const user = JSON.parse(userSession)
     const salvos = user.salvos
-    console.log (salvos)
-    const query = {
-        salvoId: []
+    let query = {
+        salvo1: salvos[0],
+        salvo2: salvos[1],
+        salvo3: salvos[2],
+        salvo4: salvos[3],
+        salvo5: salvos[4],
+        salvo6: salvos[5],
+        salvo7: salvos[6],
+        salvo8: salvos[7]
     }
- ///   query.salvoId.push(salvos)
     console.log(query)
     const url = JSON.stringify(query)
-    const url64 = Buffer.from(url).toString("base64")
+
     return (
         <div>
             <head>
@@ -50,13 +57,13 @@ export default async function User() {
                                 Nome
                             </h2>
                             <a className={styles.dadosButton}><HiOutlineUserCircle/> Dados Pessoais</a>
-                            <Link  href={"./salvos?query=" + url} className={styles.salvosButton}>Anuncios Salvos</Link>
+                           <ButtonSalvos url={url}/>
+                            <SignOut/>
                         </div>
                         <div className={styles.userCard}>
                             <h2 className={styles.title}>Dados Pessoais</h2>
                             <a className={styles.userInfo}>Nome: {session.user?.name}</a>
                             <a className={styles.userInfo}>Email: {session.user?.email}</a>
-                            {session && <pre>{JSON.stringify(session, null, 2)}</pre>}
                         </div>
                     </div>
                 ) : (

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://db.onlinewebfonts.com/c/79174e198176f8e04958195dcee95e84?family=Orion+Esperanto+Dika);
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -35,7 +34,6 @@ body::-webkit-scrollbar{
 
 body { 
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -73,7 +71,6 @@ body {
   top: 40%;
   font-size:x-large;
   font-style: normal;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   letter-spacing: 1px}
 

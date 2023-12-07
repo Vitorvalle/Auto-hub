@@ -29,6 +29,7 @@ const Cadastro = () => {
       email,
       senha,
       confSenha,
+      salvos:[]
     };
 
     try {
