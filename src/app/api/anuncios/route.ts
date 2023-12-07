@@ -8,6 +8,7 @@ import { NextApiResponse } from 'next';
 export async function GET(req:any, res: NextApiResponse) {
     const params = JSON.parse(Buffer.from(req.url.split("?")[1],'base64').toString('utf-8'))
     await connectDb();
+    console.log(req)
     const anuncios = await Anuncio.find(
         {veiculo: {$regex: params.marca + " " + params.modelo, $options: 'i'},
         ano: {$gte: params.anoMin, $lte: params.anoMax},

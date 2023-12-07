@@ -12,7 +12,19 @@ export default async function User() {
     if(!session) {
         redirect('/api/auth/singin?callbackUrl=/user')
     }
-    console.log(session.user)
+
+
+    const userSession = JSON.stringify(session.user, null, 2)
+    const user = JSON.parse(userSession)
+    const salvos = user.salvos
+    console.log (salvos)
+    const query = {
+        salvoId: []
+    }
+ ///   query.salvoId.push(salvos)
+    console.log(query)
+    const url = JSON.stringify(query)
+    const url64 = Buffer.from(url).toString("base64")
     return (
         <div>
             <head>
@@ -38,13 +50,14 @@ export default async function User() {
                                 Nome
                             </h2>
                             <a className={styles.dadosButton}><HiOutlineUserCircle/> Dados Pessoais</a>
-                            <Link  href={'/salvos'} className={styles.salvosButton}>Anuncios Salvos</Link>
+                            <Link  href={"./salvos?query=" + url} className={styles.salvosButton}>Anuncios Salvos</Link>
                         </div>
                         <div className={styles.userCard}>
                             <h2 className={styles.title}>Dados Pessoais</h2>
                             <a className={styles.userInfo}>Nome: {session.user?.email}</a>
-                            <a className={styles.userInfo}>Email: {session.user?.name}</a>
+                            <a className={styles.userInfo}>Email: {user.id}</a>
                             <a className={styles.userInfo}>Usuario desde:  </a>
+                            {session && <pre>{JSON.stringify(session, null, 2)}</pre>}
                         </div>
                     </div>
                 ) : (

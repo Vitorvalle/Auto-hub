@@ -4,7 +4,8 @@ const usuarioSchema = new Schema(
     {
         nome: String,
         email: String,
-        senha: String
+        senha: String,
+        salvos: [String]
     },
     {
         timestamps: true,
