@@ -6,7 +6,7 @@ Este projeto foi desenvolvido para a escola de ti do ultimo ano de ESOFT e ADS d
 
 Felipe Ostetti (Scrum master)
 Matheus Costa Granato (???)
-Mahteus Henrique (Developer Back-end, Database Engeneer)
+Mahteus Henrique (Developer Back-end, Database Engineer)
 Vitor Abrantes Valle (P.O, Developer FullStack)
 
 ## Descrição do projeto
